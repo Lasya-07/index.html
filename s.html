@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grand Taste Restaurant Menu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: url('wk.webp') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(164, 162, 162, 0.7);
+      z-index: -1;
+    }
+    .menu-container {
+      width: 100%;
+      max-width: 850px;
+      background: rgba(33, 32, 32, 0.85);
+      padding: 2rem;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+      border-radius: 12px;
+    }
+
+  
+    .menu-cover {
+      background: rgb(39, 101, 110);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .menu-cover h1 {
+      font-size: 3rem;
+      color: #7de423;
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-cover h1 span {
+      background: #8B4513;
+      padding: 0.2rem 1rem;
+      margin-left: 1rem;
+      font-size: 1.2rem;
+      border-radius: 4px;
+      color: #a9bddc;
+    }
+
+    .menu-cover h2 {
+      font-size: 1.2rem;
+      color: #ddd;
+      margin-bottom: 1rem;
+    }
+
+    .menu-cover .cover-img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      margin: 1rem 0;
+      border-radius: 8px;
+    }
+
+    .cover-details p,
+    .cover-details a {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin: 0.3rem 0;
+    }
+
+    .cover-details a {
+      color: #ffa500;
+      text-decoration: none;
+    }
+    .menu-inside {
+      background:grey;
+      padding: 2rem 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    .menu-inside h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      color: #ffa500;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: #73c8f5;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid #ffa500;
+      display: inline-block;
+    }
+
+    .menu-section {
+      margin-bottom: 2rem;
+    }
+
+    .menu-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu-section ul li {
+      display: flex;
+      justify-content: space-between;
+      margin: 0.5rem 0;
+      font-size: 1rem;
+      color: #eee;
+    }
+
+    .menu-section ul li span:last-child {
+      font-weight: bold;
+      color: #ffa500;
+    }
+
+    @media print {
+      body {
+        background: none;
+        color: black;
+      }
+
+      .menu-container {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 1cm;
+      }
+
+      .menu-cover, .menu-inside {
+        page-break-after: always;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu-container">
+    <!-- Cover Section -->
+  <div class="menu-cover">
+      <h2>Best Quality Restaurant</h2>
+      <h1>MENU <span>FOOD</span></h1>
+      <div class="cover-details">
+        <p>📍 Kukatpally Housing Board, Hyderabad</p>
+        <p>⏰ Open Hours: 8 AM – 10 PM</p>
+        <p>🎶 Live Music: 6 PM</p>
+        <p>📞 Contact: 0987 65 321</p>
+        <a href="#">🌐 www.yoursrestaurant.com</a>
+      </div>
+    </div>
+
+    <!-- Menu Items -->
+    <section class="menu-inside">
+      <h1>THE MENU</h1>
+      <!-- Starters -->
+      <div class="menu-section">
+        <h2 class="section-title">Starters 🍢</h2>
+        <ul>
+          <li><span>🥟 Veg Spring Rolls</span><span>50</span></li>
+          <li><span>🍗 Chicken Lollipop</span><span>150</span></li>
+          <li><span>🍟 French Fries</span><span>70</span></li>
+          <li><span>🍤 Prawn Tempura</span><span>150</span></li>
+          <li><span>🌽 Corn Cheese Balls</span><span>100</span></li>
+          <li><span>🧀 Cheese Garlic Bread</span><span>150</span></li>
+          <li><span>🥓 Bacon Bites</span><span>200</span></li>
+          <li><span>🌶️ Chili Paneer</span><span>150</span></li>
+          <li><span>🥚 Egg Devil</span><span>150</span></li>
+          <li><span>🍢 Mutton Seekh Kebab</span><span>200</span></li>
+          <li><span>🧄 Garlic Mushrooms</span><span>150</span></li>
+          <li><span>🥑 Avocado Toast</span><span>150</span></li>
+          <li><span>🧆 Falafel Bites</span><span>150</span></li>
+          <li><span>🍅 Bruschetta</span><span>150</span></li>
+          <li><span>🥒 Cucumber Rolls</span><span>100</span></li>
+        </ul>
+      </div>
+
+      <!-- Biryanis -->
+      <div class="menu-section">
+        <h2 class="section-title">Biryanis 🍛</h2>
+        <ul>
+          <li><span>🍛 Chicken Biryani</span><span>250</span></li>
+          <li><span>🍖 Mutton Biryani</span><span>300</span></li>
+          <li><span>🥦 Veg Biryani</span><span>270</span></li>
+          <li><span>🐟 Fish Biryani</span><span>300</span></li>
+          <li><span>🥚 Egg Biryani</span><span>250</span></li>
+          <li><span>🌶️ Hyderabadi Biryani</span><span>300</span></li>
+          <li><span>🔥 Spicy Dum Biryani</span><span>270</span></li>
+          <li><span>🧄 Garlic Chicken Biryani</span><span>200</span></li>
+          <li><span>🍗 Fried Chicken Biryani</span><span>250</span></li>
+          <li><span>🍅 Tomato Biryani</span><span>200</span></li>
+          <li><span>🥬 Green Masala Biryani</span><span>250</span></li>
+          <li><span>🍢 Kebab Biryani</span><span>300</span></li>
+          <li><span>🍍 Pineapple Biryani</span><span>250</span></li>
+          <li><span>🌰 Dry Fruit Biryani</span><span>300</span></li>
+        </ul>
+      </div>
+
+      <!-- Desserts -->
+      <div class="menu-section">
+        <h2 class="section-title">Desserts 🍰</h2>
+        <ul>
+          <li><span>🍮 Caramel Pudding</span><span>100</span></li>
+          <li><span>🍫 Chocolate Lava Cake</span><span>200</span></li>
+          <li><span>🍦 Vanilla Ice Cream</span><span>70</span></li>
+          <li><span>🍩 Donuts</span><span>40</span></li>
+          <li><span>🍧 Fruit Custard</span><span>70</span></li>
+          <li><span>🍪 Cookies & Cream</span><span>50</span></li>
+          <li><span>🍓 Strawberry Delight</span><span>70</span></li>
+          <li><span>🥧 Apple Pie</span><span>70</span></li>
+          <li><span>🍮 Flan</span><span>100</span></li>
+          <li><span>🍰 Cheesecake</span><span>80</span></li>
+          <li><span>🍡 Gulab Jamun</span><span>50</span></li>
+          <li><span>🍨 Kulfi</span><span>50</span></li>
+          <li><span>🍈 Rasmalai</span><span>50</span></li>
+          <li><span>🍯 Malpua</span><span>50</span></li>
+          <li><span>🎂 Celebration Cake</span><span>300</span></li>
+        </ul>
+      </div>
+
+      <!-- Beverages -->
+      <div class="menu-section">
+        <h2 class="section-title">Beverages 🥤</h2>
+        <ul>
+          <li><span>🥤 Cola</span><span>20</span></li>
+          <li><span>🍹 Mojito</span><span>70</span></li>
+          <li><span>🧋 Bubble Tea</span><span>40</span></li>
+          <li><span>🍵 Green Tea</span><span>50</span></li>
+          <li><span>☕ Hot Coffee</span><span>40</span></li>
+          <li><span>🧃 Orange Juice</span><span>50</span></li>
+          <li><span>🍷 Red Wine</span><span>100</span></li>
+          <li><span>🍸 Martini</span><span>100</span></li>
+          <li><span>🥛 Cold Milk</span><span>50</span></li>
+          <li><span>🥶 Iced Latte</span><span>40</span></li>
+          <li><span>🍶 Lassi</span><span>30</span></li>
+          <li><span>🥥 Coconut Water</span><span>50</span></li>
+          <li><span>🍺 Beer</span><span>100</span></li>
+          <li><span>🧊 Mint Cooler</span><span>50</span></li>
+          <li><span>🍋 Lemon Soda</span><span>50</span></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
